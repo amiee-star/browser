@@ -1,0 +1,65 @@
+#PreviewMapModal {
+	width: 100vw !important;
+	height: 100vh !important;
+	position: relative;
+	.map-box {
+		width: 800px;
+		height: 603px;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		// position: relative;
+		// background: #00000050;
+		// overflow: hidden;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.map-view {
+			// width: 100%!important;
+			// height: 100%!important;
+			position: relative;
+			img {
+				width: 100% !important;
+				height: auto !important;
+			}
+			.point {
+				position: absolute;
+				color: #fff;
+				width: 0;
+				height: 0;
+				transition: all 0.1s ease-in-out;
+				font-size: 30px;
+				span {
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					transform: translate(-50%, -50%);
+				}
+				&::before {
+					position: absolute;
+					border-radius: 0 0 40px;
+					width: 40px;
+					height: 40px;
+					background: #f8042180;
+					content: " ";
+					transform: translate(-50%, 50%) rotate(45deg);
+				}
+			}
+		}
+		.preview {
+			position: absolute;
+			bottom: 3px;
+			right: 4px;
+			font-size: 15px;
+		}
+		.preview:hover {
+			cursor: pointer;
+		}
+	}
+	.ant-btn-circle.ant-btn-lg {
+		position: fixed !important;
+		right: 20px;
+		top: 20px;
+	}
+}

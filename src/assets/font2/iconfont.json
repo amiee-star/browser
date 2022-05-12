@@ -1,0 +1,58 @@
+{
+  "id": "2850510",
+  "name": "4d浏览",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "13474461",
+      "name": "下一步",
+      "font_class": "xiayibu",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    },
+    {
+      "icon_id": "5528817",
+      "name": "视角",
+      "font_class": "shijiao1",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "6774727",
+      "name": "地图",
+      "font_class": "map",
+      "unicode": "e6e0",
+      "unicode_decimal": 59104
+    },
+    {
+      "icon_id": "7855521",
+      "name": "三维视角",
+      "font_class": "_3d",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "15775013",
+      "name": "平面图",
+      "font_class": "pingmiantu",
+      "unicode": "e681",
+      "unicode_decimal": 59009
+    },
+    {
+      "icon_id": "13474460",
+      "name": "上一步",
+      "font_class": "shangyibu",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "77403",
+      "name": "链接",
+      "font_class": "lianjie",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    }
+  ]
+}

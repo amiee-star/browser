@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport"
+  content="width=width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    #app {
+      height: 100vh;
+      background-color: #fff;
+    }
+
+    @font-face {
+      font-family: element-icons;
+      src: url(fonts/element-icons.woff) format("woff"),
+        url(fonts/element-icons.woff) format("truetype");
+      font-weight: 400;
+      font-display: "auto";
+      font-style: normal;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <div id="canvas" style="width: 100%;height:100%"></div>
+  </div>
+</body>
+<script src="jszip-utils.min.js"></script>
+<script src="jszip.min.js"></script>
+<script src="zlib.min.js"></script>
+<script src="model.js"></script>
+<script src="main.js"></script>
+<script>
+  let url = location.href
+  const temp2 = url.split('?')[1];
+  const pram2 = new URLSearchParams('?' + temp2);
+  let jm = decodeURIComponent(pram2.get('model'))
+  let modeJson = null
+  var request = new XMLHttpRequest();
+
+  request.open("get", jm);
+
+  request.send(null);
+
+  request.onload = function () {
+
+    if (request.status == 200) {
+      const replaceUrl = jm.replace("/i3dconfig.json", "")
+      const responseText = request.responseText.replace(/@baseurl/g, replaceUrl)
+      var resJson = JSON.parse(responseText);
+      modeJson = resJson.model
+      let json = modeJson.view
+      let Model = JMYDModel;
+      console.log(modeJson)
+      console.log(modeJson.real3d)
+      console.log(modeJson.real3d.location)
+      let obj = new Model({
+        url: modeJson.real3d.location,
+        el: "#canvas",
+        data: () => {
+
+          return {
+            type: 'jm2',
+            ...json,
+          };
+        },
+        // progress: function (e) {
+        //   if (progress) {
+        //     progress.style.width = (e.loaded / e.total) * 100 + "%";
+        //   }
+        // },
+        loaded: () => {
+          let loading = document.getElementById("loading");
+          console.log(1111)
+        }
+      })
+    }
+
+  }
+
+</script>
+
+</html>

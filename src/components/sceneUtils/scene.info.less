@@ -1,0 +1,97 @@
+#SceneInfo {
+	position: absolute;
+	z-index: 2;
+	left: 30px;
+	top: 22px;
+	.hallImage {
+		width: 48px;
+		height: 48px;
+		border-radius: 50%;
+    box-shadow: 0px 5px 21px 0px rgba(4, 0, 0, 0.3);
+		margin-right: 15px;
+		z-index: 2;
+    margin-top: 5px;
+    margin-left: 5px;
+		cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    /* 子元素横向排列 */
+    justify-content: center;
+    /* 相对父元素水平居中 */
+    align-items: center;
+    img{
+      width:32px;
+      height:32px;
+    }
+	}
+	.content {
+		display: flex;
+		justify-content: space-between;
+		position: relative;
+
+		p {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 0px;
+		}
+		.hallEnName {
+			width: 70%;
+		}
+		.downBtn {
+			cursor: pointer;
+		}
+	}
+	.info {
+		position: absolute;
+		left: 0;
+    	top: 0;
+		width: 320px;
+		background-color: rgba(0,0,0,.6);
+		box-shadow: 0 5px 21px 0 rgba(4,0,0,.18);
+		font-size: 14px;
+    padding: 7px 20px 8px 70px;
+		color: #fff;
+		border-radius: 27px;
+		cursor: pointer;
+	}
+	.pcDetail {
+		width: 330px;
+		background-color: rgba(0,0,0,.6);
+		border-radius: 10px;
+		position: absolute;
+		left: 0;
+		top: 70px;
+		padding: 23px 20px 15px;
+		color: #fff;
+		cursor: Default;
+    .desc{
+      word-wrap:break-word;
+      word-break:break-all;
+    }
+		.line {
+			height: 1px;
+			background: hsla(0,0%,73.3%,.4);
+			margin: 10px 0 16px;
+		}
+		.contact {
+			display: flex;
+			justify-content: space-between;
+			ul {
+				width: 100%;
+				font-size: 14px;
+				padding-left: 0;
+				li {
+					margin-bottom: 18px;
+					overflow: hidden;
+					display: flex;
+					width: 100%;
+				}
+				img {
+					margin-right: 15px;
+					margin-top: -3px;
+				}
+			}
+		}
+	}
+
+}

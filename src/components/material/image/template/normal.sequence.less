@@ -1,0 +1,146 @@
+#NormalSequence,
+#NormalSequenceMobile {
+	max-width: 970px;
+	margin: 0 auto;
+	position: relative;
+	.header {
+		width: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 1000;
+		background: #000;
+		.header-box,
+		.header-box-mobile {
+			max-width: 970px;
+			margin: 0 auto;
+			font-size: 22px;
+			height: 60px;
+			color: #fff;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		.header-box-mobile {
+			height: 45px;
+			line-height: 45px;
+			padding: 0 50px;
+			.title {
+				width: 100%;
+				height: 100%;
+				text-align: center;
+				margin: 0;
+				font-size: 16px;
+				font-weight: 700;
+			}
+		}
+		.other {
+			.anticon,
+			.ant-btn-link {
+				color: #09c9ff;
+				font-size: 16px;
+				i {
+					margin-right: 3px;
+					position: relative;
+					top: 1px;
+				}
+				.rule-yinle,
+				.rule-yinle + span {
+					color: #bbb;
+				}
+			}
+		}
+	}
+	.content {
+		padding-top: 80px;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		flex-grow: 1;
+		.other-mobile {
+			height: 40px;
+			position: absolute;
+			right: 15px;
+			top: 60px;
+			.musicContain,
+			.linkContain {
+				span {
+					display: inline-block;
+					width: 40px;
+					height: 40px;
+					line-height: 40px;
+					color: #fff;
+					font-size: 20px;
+					border: 1px solid #666;
+					border-radius: 50%;
+					text-align: center;
+				}
+			}
+			.musicContain {
+				margin-right: 10px;
+			}
+		}
+		.tab-content {
+			width: 100%;
+			height: 65vh;
+			// background: #232323;
+		}
+		.tab-nav {
+			height: 40px;
+			border: 1px solid #666;
+			border-radius: 20px;
+			background: #666;
+			color: #bbb;
+			display: flex;
+			margin-bottom: 20px;
+			i {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 56px;
+				height: 100%;
+				border-radius: 19px;
+				cursor: pointer;
+				&.active {
+					background: #020303;
+					color: #09c9ff;
+				}
+			}
+		}
+	}
+}
+#NormalImageMobile {
+	.content {
+		justify-content: inherit;
+		align-items: inherit;
+		flex-grow: 1;
+		padding-top: 60px;
+		.tab-nav {
+			background: #020404;
+			border: 1px solid #666;
+			padding: 0 15px;
+			width: 118px;
+			margin-left: 15px;
+			margin-bottom: 15px;
+			i {
+				width: auto;
+				margin-right: 15px;
+				font-size: 18px;
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+		.tab-content {
+			height: 61vh;
+			background: none;
+		}
+	}
+	.swiper-pagination-bullet {
+		width: 5px;
+		height: 5px;
+		background: #eee;
+	}
+}

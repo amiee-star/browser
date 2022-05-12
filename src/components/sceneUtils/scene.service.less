@@ -1,0 +1,208 @@
+#tool,
+#toolMobile {
+	position: fixed;
+	bottom: 20px;
+	right: 18px;
+	#service,
+	#serviceMobile {
+		.pcfixed-tools {
+			z-index: 40;
+			.kef {
+				cursor: pointer;
+				position: relative;
+				width: 98px;
+				height: 100px;
+				.roll {
+					position: absolute;
+					left: 46px;
+					top: 9px;
+					transform-origin: 0 37px;
+					animation: ballRoll 2.5s infinite linear;
+					z-index: 1;
+				}
+				.kfbtn,
+				.mkfbtn {
+					position: absolute;
+					z-index: 2;
+					left: -2px;
+					bottom: 0;
+					width: 98px;
+					height: 32px;
+					line-height: 32px;
+					font-size: 14px;
+					color: #fff;
+					text-align: center;
+					background-color: #4dd3fd;
+					border-radius: 16px;
+				}
+				.kfbg {
+					position: absolute;
+				}
+			}
+		}
+	}
+	#serviceMobile {
+		.pcfixed-tools {
+			div.kef {
+				width: 76.8px;
+				height: 78.72px;
+				left: 0;
+				top: 0;
+				.roll {
+					left: 36px;
+					top: 8px;
+					transform-origin: 0 28px;
+				}
+				.mkfbtn {
+					width: 100%;
+					height: 25.6px;
+					line-height: 25.6px;
+					text-align: center;
+					background-color: #4dd3fd;
+					color: #fff;
+					font-size: 12.8px;
+					border-radius: 12.8px;
+				}
+				.kfbg {
+					width: 72.192px;
+					height: 72.192px;
+				}
+			}
+		}
+	}
+
+	@keyframes ballRoll {
+		0% {
+			transform: rotate(0);
+		}
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+
+	#live,
+	#liveMobile {
+		margin-top: 10px;
+		z-index: 40;
+		height: 32px;
+		line-height: 32px;
+		background: linear-gradient(90deg, #21d4fd 0%, #b721ff 100%);
+		border-radius: 16px;
+		text-align: center;
+		color: #fff;
+		font-weight: 500;
+		display: flex;
+		cursor: pointer;
+		padding: 0 18px 0 0;
+		ul {
+			vertical-align: baseline;
+			padding-left: 18px;
+			padding-right: 5px;
+			li {
+				background-color: #fff;
+				margin-left: 1.5px;
+				margin-right: 1.5px;
+				display: inline-block;
+				width: 2px;
+				height: 16px;
+				margin-top: 6px;
+			}
+			.m1 {
+				-webkit-animation: 0.8s 0.1s living linear infinite backwards normal;
+				animation: 0.8s 0.1s living linear infinite backwards normal;
+				animation-delay: -1.1s;
+			}
+			.m2 {
+				-webkit-animation: 0.8s 0.3s living linear infinite backwards normal;
+				animation: 0.8s 0.3s living linear infinite backwards normal;
+				animation-delay: -1.3s;
+			}
+			.m3 {
+				-webkit-animation: 0.8s 0.6s living linear infinite backwards normal;
+				animation: 0.8s 0.6s living linear infinite backwards normal;
+				animation-delay: -1.6s;
+			}
+		}
+	}
+	#liveMobile {
+		width: 65px;
+		height: 72px;
+		display: inherit;
+		padding: 7.68px 0 0;
+		margin-left: 3.84px;
+		ul {
+			width: 30.72px;
+			height: 30.72px;
+			background-color: #fff;
+			border-radius: 50%;
+			vertical-align: inherit;
+			padding-left: 0;
+			padding-right: 0;
+			margin: 0 auto;
+			li {
+				margin-left: 1.5px;
+				margin-right: 1.5px;
+				display: inline-block;
+				width: 2px;
+				height: 16px;
+				margin-top: 6px;
+				background-color: #b721ff;
+			}
+		}
+		span {
+			font-size: 12.8px;
+		}
+	}
+
+	@-webkit-keyframes living {
+		0% {
+			-webkit-transform: scaleY(1);
+			transform: scaleY(1);
+			-webkit-transform-origin: 0 16px;
+			transform-origin: 0 16px;
+		}
+		50% {
+			-webkit-transform: scaleY(0.3);
+			transform: scaleY(0.3);
+			-webkit-transform-origin: 0 16px;
+			transform-origin: 0 16px;
+		}
+		100% {
+			-webkit-transform: scaleY(1);
+			transform: scaleY(1);
+			-webkit-transform-origin: 0 16px;
+			transform-origin: 0 16px;
+		}
+	}
+	@keyframes living {
+		0% {
+			-webkit-transform: scaleY(1);
+			-ms-transform: scaleY(1);
+			transform: scaleY(1);
+			-webkit-transform-origin: 0 16px;
+			-ms-transform-origin: 0 16px;
+			transform-origin: 0 16px;
+		}
+		50% {
+			-webkit-transform: scaleY(0.3);
+			-ms-transform: scaleY(0.3);
+			transform: scaleY(0.3);
+			-webkit-transform-origin: 0 16px;
+			-ms-transform-origin: 0 16px;
+			transform-origin: 0 16px;
+		}
+		100% {
+			-webkit-transform: scaleY(1);
+			-ms-transform: scaleY(1);
+			transform: scaleY(1);
+			-webkit-transform-origin: 0 16px;
+			-ms-transform-origin: 0 16px;
+			transform-origin: 0 16px;
+		}
+	}
+}
+
+#toolMobile {
+	bottom: 130px;
+	right: 8px;
+}
